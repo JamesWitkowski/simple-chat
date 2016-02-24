@@ -1,27 +1,36 @@
-<html ng-app="bcwChats">
+<html ng-app="jsDial">
 <head>
     <meta charset="UTF-8">
-    <title>Chatroom for BCW</title>
+    <title>js-Dial</title>
+    <link rel="stylesheet" href="public/assets/styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300">
+    
 </head>
-<body ng-controller="ChatsController">
+<body ng-controller="DialController">
     
     
-    <div>
-        <div class="chat" ng-repeat="chat in chats">
-           {{chat.name}} - {{chat.body}}
-        </div>
-    </div>
     
-    <div>
-        <input type="text" ng-model="newChat.body"/>
-        <button ng-click="sendChat()">SEND CHAT</button>
-    </div>
+    <div class="container">
+
+		<div class="switch white">
+
+			<input type="radio" name="switch" id="switch-off" ng-click="sendPos()">
+			<input type="radio" name="switch" id="switch-on" checked ng-click="sendPos()">
+
+			<label for="switch-off">Off</label>
+			<label for="switch-on">On</label>
+
+			<span class="toggle"></span>
+
+		</div>
+
+	</div>
     
     
     <script src="assets/plugins/angular/angular.js"></script>
     
     <script src="app/app.js"></script>
-    <script src="app/chats-controller.js"></script>
+    <script src="app/dial-controller.js"></script>
     
     
 </body>

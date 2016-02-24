@@ -1,1 +1,1 @@
-var app = angular.module('bcwChats', [])
+var app = angular.module('jsDial', [])
